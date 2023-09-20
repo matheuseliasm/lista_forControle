@@ -9,9 +9,13 @@
     //ENTRADA
     const notas = Number(prompt(`Informe quantas notas o aluno teve.`))
     //PROCESSAMENTO
-    
-    
+    let somaDasNotas = 0;
+    for (let indicenota = 1; indicenota <= quantidadeDeNotas; i++) {
+        const nota = Number(prompt(`Informe a nota ${i}:`));
+        somaDasNotas += nota;
+    }
+    const mediaDasNotas = somaDasNotas / quantidadeDeNotas;
 
     //SAÍDA
-
+    alert(`A média das ${quantidadeDeNotas} notas é: ${mediaDasNotas }`);
 </script>
