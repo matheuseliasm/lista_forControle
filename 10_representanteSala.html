@@ -1,18 +1,44 @@
-<meta charset="UTF-8">
-<script>
-    /*
-    PROBLEMA
-    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
-    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
-    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
-    */
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // ENTRADA: Solicite ao professor regente o nome dos três candidatos e a quantidade de alunos votantes
+        const candidato1 = prompt("Digite o nome do primeiro candidato:");
+        const candidato2 = prompt("Digite o nome do segundo candidato:");
+        const candidato3 = prompt("Digite o nome do terceiro candidato:");
 
-    //ENTRADA
+        const quantidadeAlunos = parseInt(prompt("Digite a quantidade de alunos votantes:"));
 
+        // Inicialize contadores de votos para cada candidato
+        let votosCandidato1 = 0;
+        let votosCandidato2 = 0;
+        let votosCandidato3 = 0;
 
-    //PROCESSAMENTO
+        // PROCESSAMENTO: Registre os votos dos alunos
+        for (let i = 0; i < quantidadeAlunos; i++) {
+            const voto = prompt("Digite o número do candidato (1, 2 ou 3) para o aluno " + (i + 1) + ":");
+            switch (voto) {
+                case "1":
+                    votosCandidato1++;
+                    break;
+                case "2":
+                    votosCandidato2++;
+                    break;
+                case "3":
+                    votosCandidato3++;
+                    break;
+                default:
+                    alert("Opção inválida. O voto não será contabilizado.");
+            }
+        }
 
+        // SAÍDA: Apresente os resultados da votação
+        const totalVotos = votosCandidato1 + votosCandidato2 + votosCandidato3;
+        const percentualCandidato1 = (votosCandidato1 / totalVotos) * 100;
+        const percentualCandidato2 = (votosCandidato2 / totalVotos) * 100;
+        const percentualCandidato3 = (votosCandidato3 / totalVotos) * 100;
 
-    //SAÍDA
-
-</script>
+        alert("Resultados")

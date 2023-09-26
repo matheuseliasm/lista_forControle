@@ -1,16 +1,26 @@
-<meta charset="UTF-8">
-<script>
-    /*
-    PROBLEMA
-    Considere que a população de uma cidade seja de 50000 habitantes, crescendo 1,5% ao ano. Apresente em tela a população prevista para um prazo de 5 anos e um prazo de 10 anos. Apresente os dados em tela.
-    */
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // ENTRADA: Defina as variáveis iniciais
+        const populacaoInicial = 50000;
+        const taxaCrescimentoAnual = 0.015; // 1,5% expresso como decimal
 
-    //ENTRADA
+        // PROCESSAMENTO: Calcule a população prevista para 5 anos e 10 anos
+        const anos5 = 5;
+        const anos10 = 10;
 
-    
-    //PROCESSAMENTO
-    
+        const populacao5Anos = populacaoInicial * Math.pow(1 + taxaCrescimentoAnual, anos5);
+        const populacao10Anos = populacaoInicial * Math.pow(1 + taxaCrescimentoAnual, anos10);
 
-    //SAÍDA
+        // SAÍDA: Apresente os dados em tela
+        alert("População prevista para 5 anos: " + Math.round(populacao5Anos));
+        alert("População prevista para 10 anos: " + Math.round(populacao10Anos));
+    </script>
+</body>
+</html>
 
 </script>
