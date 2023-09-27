@@ -6,20 +6,17 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    // Inicialize a variável para armazenar o maior número com um valor mínimo possível.
+    //Entrada
     let maiorNumero = -Infinity;
 
-    // Use um loop for para pedir ao usuário que informe os números.
+    //PROCESAMENTO
     for (let i = 1; i <= 5; i++) {
         const numero = Number(prompt(`Informe o ${i}º número:`));
-
-        // Verifique se o número informado é maior do que o maior número encontrado até agora.
         if (numero > maiorNumero) {
             maiorNumero = numero;
         }
-    }
-
-    // Exiba o maior número encontrado.
+    }  
+    //SAIDA
     document.write(`O maior número informado é: ${maiorNumero}`);
 </script>
 

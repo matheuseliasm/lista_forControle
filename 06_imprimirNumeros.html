@@ -8,14 +8,11 @@
       // ENTRADA: Solicite ao usuário os números inicial e final
       const numeroInicial = parseInt(prompt("Digite o número inicial:"));
       const numeroFinal = parseInt(prompt("Digite o número final:"));
-
-      // PROCESSAMENTO: Verifique se o número inicial é menor que o número final
+      // PROCESSAMENTO
       if (numeroInicial < numeroFinal) {
-        // Inicialize duas listas para armazenar números ímpares e pares
         const numerosImpares = [];
         const numerosPares = [];
 
-        // Percorra os números entre o número inicial e o número final
         for (let i = numeroInicial; i <= numeroFinal; i++) {
           if (i % 2 === 0) {
             // É um número par
@@ -44,7 +41,7 @@
             numerosPares.join(", ")
         );
       } else {
-        // SAÍDA: Apresente mensagem de erro
+        // SAÍDA:
         alert("Erro: O número inicial deve ser menor que o número final.");
       }
     </script>

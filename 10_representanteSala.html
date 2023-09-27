@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
     <meta charset="UTF-8">
-</head>
-<body>
     <script>
-        // ENTRADA: Solicite ao professor regente o nome dos três candidatos e a quantidade de alunos votantes
+        //ENTRADA    
         const candidato1 = prompt("Digite o nome do primeiro candidato:");
         const candidato2 = prompt("Digite o nome do segundo candidato:");
         const candidato3 = prompt("Digite o nome do terceiro candidato:");
-
         const quantidadeAlunos = parseInt(prompt("Digite a quantidade de alunos votantes:"));
-
-        // Inicialize contadores de votos para cada candidato
         let votosCandidato1 = 0;
         let votosCandidato2 = 0;
         let votosCandidato3 = 0;
 
-        // PROCESSAMENTO: Registre os votos dos alunos
+        // PROCESSAMENTO
         for (let i = 0; i < quantidadeAlunos; i++) {
             const voto = prompt("Digite o número do candidato (1, 2 ou 3) para o aluno " + (i + 1) + ":");
             switch (voto) {
@@ -35,7 +27,7 @@
             }
         }
 
-        // SAÍDA: Apresente os resultados da votação
+        // SAÍDA
         const totalVotos = votosCandidato1 + votosCandidato2 + votosCandidato3;
         const percentualCandidato1 = (votosCandidato1 / totalVotos) * 100;
         const percentualCandidato2 = (votosCandidato2 / totalVotos) * 100;

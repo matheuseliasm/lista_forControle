@@ -6,16 +6,15 @@
 <body>
     <script>
         // ENTRADA: Não há entrada de usuário necessária neste problema
-
-        // PROCESSAMENTO: Calcule quantos dias serão necessários para atingir R$ 2.000,00
         const investimentoInicial = 1000;
         const objetivo = 2000;
-        const taxaDiaria = 0.02; // 2% expresso como decimal
+        const taxaDiaria = 0.02; 
 
         let dias = 0;
         let saldo = investimentoInicial;
 
-        while (saldo < objetivo) {
+        // PROCESSAMENTO: 
+        for (saldo < objetivo) {
             dias++;
             saldo += saldo * taxaDiaria;
         }
